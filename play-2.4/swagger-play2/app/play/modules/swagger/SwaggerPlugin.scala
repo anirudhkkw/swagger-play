@@ -82,9 +82,9 @@ class SwaggerPluginImpl @Inject()(lifecycle: ApplicationLifecycle, router: Route
   }
 
   val routesFile = config.underlying.hasPath("play.http.router") match {
-    case false => "conf/routes"
+    case false => "con/routes"
     case true => config.getString("play.http.router") match {
-      case None => "conf/routes"
+      case None => "con/routes"
       case Some(value)=> "conf/" + value.replace(".Routes", ".routes")
     }
   }
